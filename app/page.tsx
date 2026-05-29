@@ -61,6 +61,7 @@ export default function Home() {
   const [authMessage, setAuthMessage] = useState("");
   const [reportSquadron, setReportSquadron] = useState("PSC Police");
   const [auditStatus, setAuditStatus] = useState("Waiting for analysis.");
+  const [reviewMessage, setReviewMessage] = useState("");
 
   const results = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -133,6 +134,9 @@ export default function Home() {
 
     setItems((current) => [...current, item]);
     setQuery("");
+    setReviewMessage(
+      `${item.kind} "${item.name}" was sent to the PSC Analyst review queue. Analysts can approve, reject, remove with note, or ask for clarification through an anonymous channel.`,
+    );
     form.reset();
     setModal(null);
   }
@@ -171,6 +175,16 @@ export default function Home() {
           <a href="#user-profile">Profile</a>
         </nav>
         <div className="auth-actions">
+          {userName ? (
+            <>
+              <button className="icon-button" type="button" title="Notifications" aria-label="Notifications">
+                N
+              </button>
+              <button className="icon-button" type="button" title="Report status" aria-label="Report status">
+                R
+              </button>
+            </>
+          ) : null}
           <button className="ghost-button" type="button" onClick={() => openAuth("login")}>
             Login
           </button>
@@ -239,6 +253,7 @@ export default function Home() {
           >
             +
           </button>
+          {reviewMessage ? <p className="review-message">{reviewMessage}</p> : null}
           <div className="result-grid">
             {results.map((item) => (
               <article
@@ -503,47 +518,70 @@ export default function Home() {
         </section>
 
         <section className="section" id="user-profile" aria-labelledby="user-title">
-          <div className="user-shell">
-            <div className="user-banner">
-              <div>
-                <p className="eyebrow">PSC Commoner</p>
-                <h2 id="user-title">
-                  <span className="rank-abbr">Cpl.</span> {userName || "Aditi Rao"}
-                </h2>
-                <p>
-                  Evidence notes, clean arguments, and patient theory comparison. Profile
-                  descriptions support a 200 word limit with expansion.
-                </p>
+          {userName ? (
+            <div className="user-shell">
+              <div className="user-banner">
+                <div>
+                  <p className="eyebrow">PSC Commoner</p>
+                  <h2 id="user-title">
+                    <span className="rank-abbr">Tr.</span> {userName}
+                  </h2>
+                  <p>
+                    New user profile placeholder. Once Supabase is configured, this area will load
+                    real avatar, description, rank, squadron, markers, debate wins, notifications,
+                    and report-status data from the database.
+                  </p>
+                </div>
+                <div className="avatar" aria-label="User profile image">
+                  {initials(userName)}
+                </div>
               </div>
-              <div className="avatar" aria-label="User profile image">
-                {initials(userName || "Aditi Rao")}
+              <div className="marker-row">
+                <span>
+                  <strong>0</strong> PSC Markers
+                </span>
+                <span>
+                  <span className="mini-icon">o</span>
+                  <strong>10</strong> Global Markers
+                </span>
+                <span>
+                  <span className="mini-icon">w</span>
+                  <strong>0</strong> Debate wins
+                </span>
+              </div>
+              <div className="profile-actions">
+                <button className="solid-button" type="button">
+                  Edit profile
+                </button>
+                <button className="icon-button" type="button" title="Notifications" aria-label="Notifications">
+                  N
+                </button>
+                <button className="icon-button" type="button" title="Report status" aria-label="Report status">
+                  R
+                </button>
+                <button className="icon-button" type="button" title="Coins and markers" aria-label="Coins and markers">
+                  C
+                </button>
               </div>
             </div>
-            <div className="marker-row">
-              <span>
-                <strong>8</strong> PSC Markers
-              </span>
-              <span>
-                <span className="mini-icon">o</span>
-                <strong>10</strong> Global Markers
-              </span>
-              <span>
-                <span className="mini-icon">w</span>
-                <strong>2</strong> Debate wins
-              </span>
+          ) : (
+            <div className="user-shell empty-profile">
+              <p className="eyebrow">Profile</p>
+              <h2 id="user-title">Login or sign up to create your PSC profile</h2>
+              <p>
+                No dummy user profile is shown before authentication. After login, this section
+                displays a placeholder profile until Supabase provides real account data.
+              </p>
+              <div className="profile-actions">
+                <button className="solid-button" type="button" onClick={() => openAuth("signup")}>
+                  Sign up
+                </button>
+                <button className="ghost-button" type="button" onClick={() => openAuth("login")}>
+                  Login
+                </button>
+              </div>
             </div>
-            <div className="profile-actions">
-              <button className="solid-button" type="button">
-                Connect
-              </button>
-              <button className="icon-button" type="button" title="Notifications" aria-label="Notifications">
-                !
-              </button>
-              <button className="icon-button" type="button" title="Report status" aria-label="Report status">
-                ?
-              </button>
-            </div>
-          </div>
+          )}
         </section>
       </main>
 
@@ -584,20 +622,28 @@ export default function Home() {
             <button className="icon-button close-button" type="button" onClick={() => setModal(null)} aria-label="Close add request form">
               x
             </button>
-            <p className="eyebrow">Add request</p>
-            <h2>Request category, list, or profile</h2>
+            <p className="eyebrow">Analyst review request</p>
+            <h2>Request addition or photograph update</h2>
             <select name="kind">
               <option>Profile</option>
               <option>Profile List</option>
               <option>Profile List Category</option>
+              <option>Sub-category</option>
+              <option>Photo Update Request</option>
             </select>
-            <input name="name" type="text" placeholder="Name" required />
-            <input name="linked" type="text" placeholder="Linked category or list" />
-            <textarea name="description" placeholder="Short reason and evidence for this addition" />
+            <input name="name" type="text" placeholder="Name or existing item to update" required />
+            <input name="linked" type="text" placeholder="Linked category, sub-category, or list" />
+            <textarea name="description" placeholder="Reason, evidence, and source/permission context" />
             <label className="file-field">
-              <span>Optional photograph</span>
+              <span>Optional photograph for new profile or existing item update</span>
               <input name="photo" type="file" accept="image/png,image/jpeg,image/webp" />
             </label>
+            <p className="notice">
+              What happens next: the request enters a PSC Analyst queue. An analyst can approve it,
+              reject it with a note, remove it later with a note, or ask you for clarification
+              anonymously. Photo updates for existing profiles, categories, or sub-categories use
+              the same queue so media changes are reviewed before display.
+            </p>
             <p className="notice">
               Legal disclaimer: upload only photographs you own, have permission to use, or can
               lawfully submit for commentary/fair-use analysis. Do not upload pirated, defamatory,
@@ -608,7 +654,7 @@ export default function Home() {
                 Cancel
               </button>
               <button className="solid-button" type="submit">
-                Submit for PSC Analyst review
+                Submit to PSC Analyst queue
               </button>
             </menu>
           </form>
@@ -643,23 +689,28 @@ export default function Home() {
               x
             </button>
             <p className="eyebrow">Debate Chamber</p>
-            <h2>Challenge setup</h2>
+            <h2>Public challenge setup</h2>
+            <p className="coming-soon">Coming soon...</p>
             <div className="form-grid">
-              <input type="text" placeholder="Opponent username" />
               <select>
                 <option>Classic Jung</option>
                 <option>Enneagram with Subtype</option>
                 <option>Socionics</option>
                 <option>TRC</option>
               </select>
-              <textarea placeholder="State the claim you want to defend." />
+              <input type="text" placeholder="Profile, list, or topic being challenged" />
+              <textarea placeholder="State the public claim you want to defend. Any eligible user may accept once debate chambers are live." />
             </div>
+            <p className="notice">
+              Debate chambers will be public challenges, not direct challenges to a specific
+              opponent. This flow will connect to the database when the debate system is built.
+            </p>
             <menu>
               <button className="ghost-button" type="button" onClick={() => setModal(null)}>
                 Cancel
               </button>
-              <button className="danger-button" type="button" onClick={() => setModal(null)}>
-                Create challenge
+              <button className="danger-button" type="button" disabled>
+                Create public challenge
               </button>
             </menu>
           </form>

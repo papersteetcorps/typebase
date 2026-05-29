@@ -27,7 +27,12 @@ export type Profile = {
 
 export type SearchableItem = {
   id: string;
-  kind: "Profile" | "Profile List" | "Profile List Category";
+  kind:
+    | "Profile"
+    | "Profile List"
+    | "Profile List Category"
+    | "Sub-category"
+    | "Photo Update Request";
   name: string;
   list: string;
   category: string;
