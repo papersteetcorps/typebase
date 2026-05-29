@@ -1,0 +1,55 @@
+1. Terminologies
+- Subject: Centre of living conscious entity which can differentiate between subjective and objective factors.
+- Object: The subjective or objective content in consciousness that the subject is focusing on at time.
+- Ego: Awareness in center of conscious that identifies self as "I", and acts as mediator to experiences and consciousness & unconsciousness.
+- Suppressed: Consciously holding back something.
+- Repressed: Unconsciously blocked from awareness.
+- Irrational functions (S/N): Functions which perceive reality without judging it.
+- Rational functions (T/F): Function which perceive and judge reality.
+
+2. Function Groups
+- Sensing (S): Perceiving reality directly as immediate experience, in its concrete form. It registers perception of object in form of sensory stimulus.
+- Intuition (N): Perceiving reality beyond sensory details in terms of what possibilities, meanings, or patterns underlies the object. It registers perception of object in form of what could emerge, what is implied, what would become, latent patterns, and future outcomes unconsciously. Its about what's not yet actual, but is possible.
+- Thinking (T): Evaluates perceptions in terms of logical relations. It determines what object is by forming concepts, and making classifications.
+- Feeling (F): Evaluates perceptions according to values. It determines whether something is acceptable or unacceptable, agreeable or disagreeable, worthy or unworthy.
+
+3. Function Directions
+- Introverted functions (i): Orientation is directed primarily towards the subjective factor. Object is filtered through an inwardly determined standpoint that affects perception or judgement, instead of adapting to objective conditions. Resulting perception or judgement might appear detached or independent of collective standards.
+- Extraverted functions (e): Orientation is directed primarily towards the objective factor. Perception or judgement is governed by external conditions, observable facts, and collectively recognized values. Adaptation occurs through alignment with the outer situations. Resulting perception or judgement tends to be responsive, situational, and outwardly expressed. Its all about decisive reference point being external.
+
+3. Cognitive Functions
+- Introverted sensing (Si): Awareness of internal bodily states and stored sensory impressions (what is familiar?). Compares current experience with past experience. Tracks comfort, familiarity, and internal reactions. Prefers stability and known conditions.
+- Extraverted sensing (Se): Direct awareness of the physical environment as it is right now (what is happening now?). Notices details, movement, opportunities for action. Responds quickly to real-world changes Engages with what is tangible and immediate.
+- Introverted intuition (Ni): Forming a single, focused understanding of how things will unfold
+(what will happen?). Synthesizes patterns into a clear internal insight. Focuses on direction, timing, and outcomes. Seeks the most likely future path.
+- Extraverted intuition (Ne): Seeing multiple possibilities and connections in the external world.
+(What could happen?). Generates ideas and alternatives rapidly. Spots patterns, trends, and potential uses. Moves from one possibility to another.
+- Introverted thinking (Ti): Building an internal system of logic to understand how things work.
+(What makes sense?). Focuses on internal consistency and precise reasoning. Questions definitions, assumptions, and structure. Wants things to make sense logically.
+- Extraverted thinking (Te): Organizing the external world using objective facts, rules, and measurable results (what works?). Focuses on efficiency, evidence, and outcomes. Trusts data, procedures, and proven methods. Wants things to work correctly in reality.
+- Introverted feeling (Fi): Evaluating things based on personal, internal values (what feels right?). Focuses on authenticity and personal ethics. Forms deep but often unspoken value judgments. Less concerned with group consensus.
+- Extraverted feeling (Fe): Adjusting behavior based on shared emotional and social values (what keeps harmony?). Tracks and responds to group emotions. Expresses feelings outwardly. Prioritizes harmony and social alignment.
+
+4. Function Positioning (dom > aux > tert > inf)
+- Dominant function (dom): The function you rely on the most; it leads your perception and decisions automatically. Most developed and trusted function. Runs almost unconsciously (you don’t notice using it). Shapes how you interpret reality at a fundamental level. Others tend to notice it more than you do
+- Auxiliary function (aux): The second function that supports and stabilizes the dominant by providing a different mode of processing. Helps correct the one-sidedness of the dominant. Usually operates consciously and deliberately. Adds flexibility and adaptability.
+- Tertiary function (tert): A weaker function that is partially developed and inconsistently used. Less mature and often simplistic. Can appear in bursts, especially in relaxed or playful states. Not fully under conscious control.
+- Inferior function (inf): The least developed function, largely unconscious, and often a source of difficulty. Hard to control and often avoided. Becomes noticeable under stress or pressure. Feels uncomfortable, uncertain, or overwhelming.
+
+5. Cognitive Functions Table:
+INTJ: Ni > Te > Fi > Se
+INTP: Ti > Ne > Si > Fe
+ENTJ: Te > Ni > Se > Fi
+ENTP: Ne > Ti > Fe > Si
+INFJ: Ni > Fe > Ti > Se
+INFP: Fi > Ne > Si > Te
+ENFJ: Fe > Ni > Se > Ti
+ENFP: Ne > Fi > Te > Si
+ISTJ: Si > Te > Fi > Ne
+ISFJ: Si > Fe > Ti > Ne
+ESTJ: Te > Si > Ne > Fi
+ESFJ: Fe > Si > Ne > Ti
+ISTP: Ti > Se > Ni > Fe
+ISFP: Fi > Se > Ni > Te
+ESTP: Se > Ti > Fe > Ni
+ESFP: Se > Fi > Te > Ni

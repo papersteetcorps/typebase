@@ -1,0 +1,206 @@
+{
+  "socionics_model": {
+    "name": "Model A",
+    "description": "Structural model describing how information elements are positioned and metabolized within a sociotype.",
+    "function_positions": [
+      {
+        "position": 1,
+        "name": "Base",
+        "alias": "Leading",
+        "strength": "Very Strong",
+        "conscious": true,
+        "role": "Core worldview processor",
+        "behavior": "Most natural and stable perception lens. Feels self-evident."
+      },
+      {
+        "position": 2,
+        "name": "Creative",
+        "alias": null,
+        "strength": "Strong",
+        "conscious": true,
+        "role": "Flexible implementation tool",
+        "behavior": "Supports Base function. Situational and applied."
+      },
+      {
+        "position": 3,
+        "name": "Role",
+        "alias": null,
+        "strength": "Weak",
+        "conscious": true,
+        "role": "Social adaptation mask",
+        "behavior": "Used because expected. Draining when overused."
+      },
+      {
+        "position": 4,
+        "name": "Vulnerable",
+        "alias": "PoLR",
+        "strength": "Very Weak",
+        "conscious": true,
+        "role": "Blind spot",
+        "behavior": "Low stress tolerance. Deep insecurity area."
+      },
+      {
+        "position": 5,
+        "name": "Suggestive",
+        "alias": null,
+        "strength": "Weak",
+        "conscious": false,
+        "role": "Psychological need",
+        "behavior": "Feels nourishing when provided by others."
+      },
+      {
+        "position": 6,
+        "name": "Mobilizing",
+        "alias": "Activating",
+        "strength": "Medium",
+        "conscious": "Semi",
+        "role": "Growth trigger",
+        "behavior": "Area of aspiration. Praise motivates."
+      },
+      {
+        "position": 7,
+        "name": "Ignoring",
+        "alias": null,
+        "strength": "Strong",
+        "conscious": false,
+        "role": "Strong but unvalued",
+        "behavior": "Can use but dismisses as low priority."
+      },
+      {
+        "position": 8,
+        "name": "Demonstrative",
+        "alias": null,
+        "strength": "Very Strong",
+        "conscious": false,
+        "role": "Automatic background processor",
+        "behavior": "Operates effortlessly without emphasis."
+      }
+    ]
+  },
+  "information_elements": {
+    "logic": {
+      "Ti": {
+        "name": "Introverted Logic",
+        "alias": "Structural Logic",
+        "focus": [
+          "Internal systems",
+          "Classification",
+          "Logical consistency",
+          "Definitions",
+          "Framework coherence"
+        ],
+        "core_question": "Is this internally consistent?",
+        "function": "Builds structural architecture."
+      },
+      "Te": {
+        "name": "Extraverted Logic",
+        "alias": "Pragmatic Logic",
+        "focus": [
+          "Efficiency",
+          "Empirical data",
+          "Productivity",
+          "Results",
+          "Optimization"
+        ],
+        "core_question": "Does this work?",
+        "function": "Builds measurable output."
+      }
+    },
+    "ethics": {
+      "Fi": {
+        "name": "Introverted Ethics",
+        "alias": "Relational Ethics",
+        "focus": [
+          "Personal bonds",
+          "Loyalty",
+          "Moral distance",
+          "Attachment dynamics",
+          "Individual feelings"
+        ],
+        "core_question": "Where do I stand with this person?",
+        "function": "Tracks relational distance."
+      },
+      "Fe": {
+        "name": "Extraverted Ethics",
+        "alias": "Emotional Field",
+        "focus": [
+          "Emotional atmosphere",
+          "Group mood",
+          "Expressiveness",
+          "Charisma",
+          "Emotional contagion"
+        ],
+        "core_question": "What is the emotional climate?",
+        "function": "Regulates shared emotional space."
+      }
+    },
+    "intuition": {
+      "Ni": {
+        "name": "Introverted Intuition",
+        "alias": "Time / Trajectory",
+        "focus": [
+          "Long-term direction",
+          "Inevitability",
+          "Pattern evolution",
+          "Timing",
+          "Symbolism"
+        ],
+        "core_question": "Where is this heading?",
+        "function": "Perceives temporal movement."
+      },
+      "Ne": {
+        "name": "Extraverted Intuition",
+        "alias": "Potential / Possibility",
+        "focus": [
+          "Alternatives",
+          "Novel combinations",
+          "Hidden potential",
+          "Idea branching"
+        ],
+        "core_question": "What else could this become?",
+        "function": "Expands conceptual space."
+      }
+    },
+    "sensing": {
+      "Si": {
+        "name": "Introverted Sensing",
+        "alias": "Internal State / Comfort",
+        "focus": [
+          "Physical comfort",
+          "Body awareness",
+          "Aesthetic harmony",
+          "Subtle sensations",
+          "Health regulation"
+        ],
+        "core_question": "How does this feel internally?",
+        "function": "Regulates internal equilibrium."
+      },
+      "Se": {
+        "name": "Extraverted Sensing",
+        "alias": "Force / Will / Impact",
+        "focus": [
+          "Power",
+          "Direct action",
+          "Territory",
+          "Assertiveness",
+          "Momentum",
+          "Resource control"
+        ],
+        "core_question": "Who controls this space?",
+        "function": "Enforces external reality."
+      }
+    }
+  },
+  "blocks": {
+    "Ego": ["Base", "Creative"],
+    "SuperEgo": ["Role", "Vulnerable"],
+    "SuperId": ["Suggestive", "Mobilizing"],
+    "Id": ["Ignoring", "Demonstrative"]
+  },
+  "quadra_values": {
+    "Alpha": ["Ne", "Ti", "Fe", "Si"],
+    "Beta": ["Ni", "Fe", "Ti", "Se"],
+    "Gamma": ["Ni", "Te", "Fi", "Se"],
+    "Delta": ["Ne", "Te", "Fi", "Si"]
+  }
+}

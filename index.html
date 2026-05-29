@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Street Corps</title>
+    <meta
+      name="description"
+      content="Paper Street Corps is an evidence-first typology, voting, debate, and moderation platform."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Paper Street Corps home">
+        <span class="brand-mark">PSC</span>
+        <span>Paper Street Corps</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#theories">Theories</a>
+        <a href="#rules">Rules</a>
+        <a href="#guide">Guide</a>
+        <a href="#report">Report</a>
+        <a href="#user-profile">Profile</a>
+      </nav>
+      <div class="auth-actions">
+        <button class="ghost-button" type="button" data-open-auth="login">Login</button>
+        <button class="solid-button" type="button" data-open-auth="signup">Sign up</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/psc-hero.png" alt="" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Evidence-first typology platform</p>
+          <h1 id="hero-title">Paper Street Corps</h1>
+          <p class="hero-copy">
+            Structured profile typing, long-form analysis, AI-assisted vetting,
+            rank-based responsibility, and serious debate without popularity
+            farming.
+          </p>
+
+          <form class="search-panel" id="searchForm" role="search">
+            <label class="sr-only" for="searchInput">Search profiles, lists, and categories</label>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search a profile, list, or category"
+              autocomplete="off"
+            />
+            <button class="solid-button" type="submit">Search</button>
+          </form>
+
+          <div class="hero-actions">
+            <button class="danger-button" type="button" data-open-debate>
+              Enter debate chamber
+            </button>
+            <a class="text-link" href="#rules">Review voting rules</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="results" aria-labelledby="results-title">
+        <div class="section-heading">
+          <p class="eyebrow">Search Result</p>
+          <h2 id="results-title">Profiles, lists, and categories</h2>
+        </div>
+        <button class="add-button" type="button" data-open-add aria-label="Add category, list, or profile">+</button>
+        <div class="result-grid" id="resultGrid"></div>
+      </section>
+
+      <section class="section band" aria-labelledby="popular-title">
+        <div class="section-heading">
+          <p class="eyebrow">Popularly voted profile list</p>
+          <h2 id="popular-title">Fictional strategists</h2>
+        </div>
+        <div class="horizontal-rail" id="popularRail" aria-label="Scrollable profile cards"></div>
+      </section>
+
+      <section class="profile-detail" id="profile-detail" aria-live="polite"></section>
+
+      <section class="section" id="theories" aria-labelledby="theories-title">
+        <div class="section-heading">
+          <p class="eyebrow">Theories</p>
+          <h2 id="theories-title">Typology systems</h2>
+        </div>
+        <div class="theory-grid" id="theoryGrid"></div>
+      </section>
+
+      <section class="section band" id="rules" aria-labelledby="rules-title">
+        <div class="section-heading">
+          <p class="eyebrow">Rules</p>
+          <h2 id="rules-title">How the Corps stays analytical</h2>
+        </div>
+        <div class="rule-layout">
+          <article>
+            <h3>Voting and analysis</h3>
+            <p>
+              Each typology vote requires exactly one separate long-form analysis
+              comment for that system. AI vetting checks theory accuracy, profile
+              fit, bridge quality, stack explanation, and tone before it can
+              influence a public type.
+            </p>
+          </article>
+          <article>
+            <h3>Profiles and lists</h3>
+            <p>
+              Users may request categories, lists, and profiles. PSC Analysts
+              review additions, clarifications, removals, and contested analyst
+              actions through a queued officer process.
+            </p>
+          </article>
+          <article>
+            <h3>Moderation and appeals</h3>
+            <p>
+              Child comments are checked for harassment, spam, sexual content,
+              threats, ideological preaching, and manipulation. Users can appeal
+              AI or moderator decisions through the relevant squadron.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="guide" aria-labelledby="guide-title">
+        <div class="section-heading">
+          <p class="eyebrow">Platform Guide</p>
+          <h2 id="guide-title">Ranks, squadrons, and markers</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="rank-panel">
+            <h3>Rank ladder</h3>
+            <div id="rankList" class="rank-list"></div>
+          </div>
+          <div class="squadron-panel">
+            <h3>Squadron responsibilities</h3>
+            <div id="squadronList" class="squadron-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="report" aria-labelledby="report-title">
+        <div class="section-heading">
+          <p class="eyebrow">Report</p>
+          <h2 id="report-title">Route concerns to the correct squadron</h2>
+        </div>
+        <div class="report-grid" id="reportGrid"></div>
+      </section>
+
+      <section class="section" id="user-profile" aria-labelledby="user-title">
+        <div class="user-shell">
+          <div class="user-banner">
+            <div>
+              <p class="eyebrow">PSC Commoner</p>
+              <h2 id="user-title"><span class="rank-abbr">Cpl.</span> Aditi Rao</h2>
+              <p>
+                Evidence notes, clean arguments, and patient theory comparison.
+                Profile descriptions support a 200 word limit with expansion.
+              </p>
+            </div>
+            <div class="avatar" aria-label="User profile image">AR</div>
+          </div>
+          <div class="marker-row">
+            <span><strong>8</strong> PSC Markers</span>
+            <span><span class="mini-icon">o</span><strong>10</strong> Global Markers</span>
+            <span><span class="mini-icon">w</span><strong>2</strong> Debate wins</span>
+          </div>
+          <div class="profile-actions">
+            <button class="solid-button" type="button">Connect</button>
+            <button class="icon-button" type="button" title="Notifications" aria-label="Notifications">!</button>
+            <button class="icon-button" type="button" title="Report status" aria-label="Report status">?</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal" id="authDialog">
+      <form method="dialog" id="authForm">
+        <button class="icon-button close-button" value="cancel" aria-label="Close authentication form">x</button>
+        <p class="eyebrow" id="authModeLabel">Login</p>
+        <h2 id="authTitle">Welcome back</h2>
+        <input id="authName" type="text" placeholder="Display name" autocomplete="name" />
+        <input id="authEmail" type="email" placeholder="Email address" autocomplete="email" required />
+        <input id="authPassword" type="password" placeholder="Password" autocomplete="current-password" required />
+        <p class="notice">
+          Prototype mode stores a local session in this browser. Real accounts need Supabase Auth or
+          NextAuth connected on the server.
+        </p>
+        <menu>
+          <button class="ghost-button" value="cancel">Cancel</button>
+          <button class="solid-button" value="submit">Continue</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="addDialog">
+      <form method="dialog" id="addForm">
+        <button class="icon-button close-button" value="cancel" aria-label="Close add request form">x</button>
+        <p class="eyebrow">Add request</p>
+        <h2>Request category, list, or profile</h2>
+        <select id="addKind">
+          <option>Profile</option>
+          <option>Profile List</option>
+          <option>Profile List Category</option>
+        </select>
+        <input id="addName" type="text" placeholder="Name" required />
+        <input id="addLinked" type="text" placeholder="Linked category or list" />
+        <textarea id="addDescription" placeholder="Short reason and evidence for this addition"></textarea>
+        <label class="file-field">
+          <span>Optional photograph</span>
+          <input id="addPhoto" type="file" accept="image/png,image/jpeg,image/webp" />
+        </label>
+        <p class="notice">
+          Legal disclaimer: upload only photographs you own, have permission to use, or can lawfully
+          submit for commentary/fair-use analysis. Do not upload pirated, defamatory, invasive, or unsafe media.
+        </p>
+        <menu>
+          <button class="ghost-button" value="cancel">Cancel</button>
+          <button class="solid-button" value="submit">Submit for PSC Analyst review</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="reportDialog">
+      <form method="dialog">
+        <button class="icon-button close-button" value="cancel" aria-label="Close report form">x</button>
+        <p class="eyebrow" id="reportSquadron">PSC Police</p>
+        <h2>Submit concern</h2>
+        <textarea id="reportText" maxlength="900" placeholder="Write the concern with evidence and context."></textarea>
+        <menu>
+          <button class="ghost-button" value="cancel">Cancel</button>
+          <button class="solid-button" value="submit">Submit report</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="debateDialog">
+      <form method="dialog">
+        <button class="icon-button close-button" value="cancel" aria-label="Close debate chamber">x</button>
+        <p class="eyebrow">Debate Chamber</p>
+        <h2>Challenge setup</h2>
+        <div class="form-grid">
+          <input type="text" placeholder="Opponent username" />
+          <select>
+            <option>Classic Jung</option>
+            <option>Enneagram with Subtype</option>
+            <option>Socionics</option>
+            <option>TRC</option>
+          </select>
+          <textarea placeholder="State the claim you want to defend."></textarea>
+        </div>
+        <menu>
+          <button class="ghost-button" value="cancel">Cancel</button>
+          <button class="danger-button" value="submit">Create challenge</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
